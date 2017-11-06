@@ -63,10 +63,13 @@ public class SnowmanGameModel {
 				break;
 			}
 
-			StdOut.println("\n"+"Guessed Letters: " + guessedLetters.toString());
-			StdOut.println("Please enter your guess! You have " + guesses
-					+ " guesses left.");
+			StdOut.println("\n" + "Guessed Letters: "
+					+ guessedLetters.toString());
+			StdOut.println("You have " + guesses + " guesses left.");
 			StdOut.println("Guessed Word: " + guessedWord);
+			StdOut.println("There are " + dictionary.size()
+					+ " words consistant with that");
+			StdOut.println("Guess a letter: ");
 
 			turn();
 
