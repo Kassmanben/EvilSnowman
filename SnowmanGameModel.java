@@ -10,7 +10,7 @@ public class SnowmanGameModel {
 	private String guessedWord = "";
 	private String prevGuessedWord = "";
 	private int noDuplicateLetters = 0;
-	private ArrayList<String> dictionary = new ArrayList<String>();
+	ArrayList<String> dictionary = new ArrayList<String>();
 	private ArrayList<Character> guessedLetters = new ArrayList<Character>();
 
 	/**
@@ -216,6 +216,18 @@ public class SnowmanGameModel {
 
 	public static void main(String[] args) {
 		SnowmanGameModel game = new SnowmanGameModel();
+	}
+
+	public void setGuesses(int i) {
+		guesses = i;
+	}
+
+	public void setLength(int i) {
+		length = i;
+	}
+	
+	public int getDictionaySize(){
+		return dictionary.size();
 	}
 
 }
