@@ -13,26 +13,26 @@ public class SnowmanGameModelTest {
 	
 	@Test
 	public void getGuessesWorks() {
-		model.guesses = 4;
+		model.setGuesses(4);
 		assertEquals(model.getGuesses(), 4);
 	}
 	
 	@Test
 	public void getLengthWorks() {
-		model.length = 4;
+		model.setLength(4);
 		assertEquals(model.getLength(), 4);
 	}
 	
 	@Test
 	public void DictionaryFillsUp(){ 
 		model.initializeGameDictionary();
-		assertFalse(model.dictionary.isEmpty());
+		assertFalse(model.getDictionaySize()!=0);
 	}
-	
+
 	@Test
 	public void GameIsRunning(){
-		model.guesses = 4;
+		model.setGuesses(4);
 		model.run();
-		assertTrue(model.guesses < 4);
+		assertTrue(model.getGuesses() <= 4);
 	}
 }
